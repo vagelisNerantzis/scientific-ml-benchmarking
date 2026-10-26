@@ -1,0 +1,18 @@
+# All bundled observations are artificial. Paths are relative to this file.
+split_path: ../examples/data/synthetic_split.csv
+observations_path: ../examples/data/synthetic_spectra.csv
+output_dir: ../results/synthetic_spectral
+labels: [alpha, beta]
+modality: nir
+seeds: [42, 7, 123]
+model_name: svm_rbf
+C: 1.0
+gamma: scale
+feature_columns: [w1000, w1001, w1002]
+wavelengths_nm: [1000, 1001, 1002]
+input_domain: transmittance
+transmittance_units: percent
+representation: transmittance
+gpu_energy: false
+# For external data, use ${BENCHMARK_SPLIT} and ${BENCHMARK_OBSERVATIONS}.
+# textile_case_study: true  # also enforces canonical hash and class counts

@@ -1,0 +1,17 @@
+# External image inventory; no private images or checkpoints are bundled.
+split_path: ${BENCHMARK_SPLIT}
+observations_path: ${BENCHMARK_OBSERVATIONS}
+output_dir: ../results/image_validation
+labels: [alpha, beta]  # replace with your immutable class order
+modality: microscopy
+seeds: [42, 7, 123]
+model_name: frozen_resnet50_logistic
+encoder: resnet50
+pretrained: true  # may download public timm weights when explicitly run
+image_size: 384
+crop_fraction: 0.45
+eval_crops: 9
+image_batch_size: 2
+device: cpu
+C: 1.0
+gpu_energy: false

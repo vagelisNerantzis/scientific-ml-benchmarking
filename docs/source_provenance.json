@@ -1,0 +1,60 @@
+{
+  "migration": "rewritten reusable contracts, no verbatim script copies",
+  "sources": [
+    {
+      "source_basename": "12b_train_standard_modality_benchmark.py",
+      "sha256": "930bd9b1b5f0147dd6fab90dda9f65e4804a3972571b1f1b21f8116e19ff0fdb",
+      "adaptation": "images.py grid coordinates; sample aggregation; metrics/calibration; timing and NVML contracts"
+    },
+    {
+      "source_basename": "12_train_dinov2_modality_benchmark.py",
+      "sha256": "65d14c2a4ea4a77fe16f2c9a881a4ae5cf35ba627357a754e83bd208f38a5079",
+      "adaptation": "frozen encoder methodology; not its historical MLP training recipe"
+    },
+    {
+      "source_basename": "13_run_all_modality_experiments_v2.py",
+      "sha256": "8a88e5fdf4abeeeec169df87aec06c1c50fff69e19361ce13c5182a58669957e",
+      "adaptation": "repeated-seed and fair sample-unit reporting methodology; launcher rewritten"
+    },
+    {
+      "source_basename": "15_run_spectral_ml_dl_benchmark.py",
+      "sha256": "2ed7847197054fd518d825bc4a27e3230a3348ae70c5246771b6e7e4dd30d1c0",
+      "adaptation": "spectral QC, train-only scaling, SVM baseline and metrics"
+    },
+    {
+      "source_basename": "17_run_spectral_dl_embedding_benchmark_v2.py",
+      "sha256": "a1e34d5cfc466f79625580b4206c54d589ab4a0a500f0216935fd31e5f8cb80b",
+      "adaptation": "wavelength/identity contracts, calibration and telemetry; neural trainers omitted"
+    },
+    {
+      "source_basename": "18_run_absorbance_dl_embedding_benchmark_v2.py",
+      "sha256": "fb413ac5d9af68107f27ca9d7f875f476a006cf280d15e6f810a62ec54b6418f",
+      "adaptation": "absorbance domain and train-only scaling contracts; neural trainers omitted"
+    },
+    {
+      "source_basename": "19_run_absorbance_ml_benchmark.py",
+      "sha256": "f04d288e949bb77f9c0e253ecea6d9ffdc24835b5ab9a3a6021c1f3216f6a5e2",
+      "adaptation": "absorbance SVM baseline methodology"
+    },
+    {
+      "source_basename": "20_analyze_transmittance_vs_absorbance.py",
+      "sha256": "906563a88b3d4c1446268e170be4a2b678eebe1462a846e59bb22376389f79d9",
+      "adaptation": "seed-aligned paired sample bootstrap and exact McNemar; now stratified"
+    },
+    {
+      "source_basename": "21_analyze_hard_spectral_samples.py",
+      "sha256": "2d7fd52c500dc8119283eaec6e9dd55f846df92a325bade5b02cc6c14b95205a",
+      "adaptation": "post-hoc error summary contract; individual sample exports omitted"
+    },
+    {
+      "source_basename": "22_wavelength_diagnostics_hard_samples.py",
+      "sha256": "2b9db830b44306c1b4589347bede9fdc821d0b811e3e8cdde7455e4847a034de",
+      "adaptation": "train-reference deviation contract; permutation diagnostics omitted"
+    },
+    {
+      "source_basename": "svm_window_ablation.py",
+      "sha256": "a8b2a2408be7c5b6a623fe89b060bb257d08e8d78cfe69ef9646e72c23f58c17",
+      "adaptation": "predeclared windows, train-only scaling and paired comparison methodology"
+    }
+  ]
+}
